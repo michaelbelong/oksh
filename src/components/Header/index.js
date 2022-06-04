@@ -1,8 +1,8 @@
 import "./header.css";
 import React from "react";
-import { Flex, Spacer, Box, HStack, Link } from "@chakra-ui/react";
+import { Flex, Spacer, Box, Button, HStack, Link, Image } from "@chakra-ui/react";
 import { Logo } from "./Logo";
-import Bubbles from "../../assets/Bubbles.svg"
+import Bubbles from "./bubbles.png"
 const Header = () => {
   return (
     <header>
@@ -18,7 +18,7 @@ const Header = () => {
               <Logo />
             </Link>
             </Box>
-            <Box>okshell</Box>
+            <Box pointerEvents="none">okshell</Box>
             <Spacer />
           </HStack>
         </Box>
@@ -28,10 +28,9 @@ const Header = () => {
             <Link
             href="https://www.ppuunnkk.com/"
             variant="none"
-            _hover={{ color: 'hsl(323, 100%, 50%)'}}
             isExternal
             >
-            P
+            <Image src={Bubbles} />
             </Link>
           </Box>
         </Box>
