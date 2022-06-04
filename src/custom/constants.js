@@ -1,6 +1,6 @@
 import { ReactThemes } from "react-terminal-component";
 
-export const COPY_LABEL = "𝚌𝚘𝚙𝚒𝚎𝚍 Ξ";
+export const COPY_LABEL = "𝙲𝙾𝙿𝙸𝙴𝙳 Ξ";
 export const CHAR_LIMIT = 280;
 
 export const colors = {
