@@ -10,7 +10,13 @@ const Header = () => {
         <Box p="4">
           <HStack spacing="24px" bg="black">
             <Box w="32px" h="32px">
+            <Link
+            href="https://www.okpc.app/"
+            variant="none"
+            isExternal
+            >
               <Logo />
+            </Link>
             </Box>
             <Box>okshell</Box>
             <Spacer />
