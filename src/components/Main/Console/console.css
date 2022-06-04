@@ -1,0 +1,5 @@
+.console .terminalContainer {
+  /* width: 75%; */
+  /* border: 1px solid pink; */
+  border: 6px solid hsl(0, 0%, 14%);
+}

@@ -1,0 +1,9 @@
+header {
+  font-family: var(--chakra-fonts-heading);
+  color: var(--chakra-colors-gray-500);
+  text-transform: uppercase;
+}
+
+#Layer_1 {
+  /* width: 10%; */
+}

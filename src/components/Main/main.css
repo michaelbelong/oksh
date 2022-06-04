@@ -1,0 +1,18 @@
+main {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+main > .chakra-container {
+  /* border: 1px solid red; */
+  /* padding: 0; */
+  display: flex;
+}
+
+main > .chakra-container > div:nth-child(1) {
+  flex: 1;
+}
+main > .chakra-container > div:nth-child(2) {
+  flex: 0;
+}

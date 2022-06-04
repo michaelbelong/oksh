@@ -1,0 +1,25 @@
+footer {
+  padding: 3em;
+  background: #000;
+}
+
+footer>div {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+}
+footer a {
+  font-size: 12px;
+  font-family: var(--chakra-fonts-body);
+  text-transform: uppercase;
+  text-decoration: none !important;
+}
+footer a:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (min-width: 48em) {
+  footer a {
+    font-size: 16px;
+  }
+}
