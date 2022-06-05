@@ -24,6 +24,29 @@ export const terminalProps = {
   }
 };
 
+export const TEXT_INPUT_MODES = [
+  {
+  key: 9,
+  text: "AA",
+  value: "uppercase"
+  },
+  {
+  key: 9,
+  text: "Aa",
+  value: "titlecase"
+  },
+  {
+  key: 9,
+  text: "aa",
+  value: "lowercase"
+  },
+  {
+  key: 9,
+  text: "FF",
+  value: "freeform"
+  }
+];
+
 // export const COMMANDS = [
 //   "𝚌𝚕𝚎𝚊𝚛",
 //   "𝚌𝚘𝚙𝚢",

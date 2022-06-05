@@ -13,8 +13,11 @@ const Execute = ({ Children, text, isCopied, colorSelected, ...rest }) => (
   </Tooltip>
 );
 
-const Console = ({ colorSelected }) => {
-  const { isCopied, handleExecute, terminalProps } = useTerminal();
+const Console = ({ colorSelected, text, value, counter }) => {
+  
+  const { isCopied, handleExecute, terminalProps } = useTerminal(counter);
+  
+  console.log(text, value, counter);
 
   terminalProps.theme['promptSymbolColor'] = colorSelected
   terminalProps.theme['outputColor'] = colorSelected

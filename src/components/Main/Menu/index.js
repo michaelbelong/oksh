@@ -1,29 +1,7 @@
 import "./menu.css";
 import React from "react";
 import { Button, HStack } from "@chakra-ui/react";
-
-const TEXT_INPUT_MODES = [
-  {
-    key: 9,
-    text: "AA",
-    value: "uppercase"
-  },
-  {
-    key: 9,
-    text: "Aa",
-    value: "capitalize"
-  },
-  {
-    key: 9,
-    text: "aa",
-    value: "lowercase"
-  },
-  {
-    key: 9,
-    text: "FF",
-    value: "none"
-  }
-];
+import { TypeMode } from "./TypeMode";
 
 const styleProps = {
   w: "32px",
@@ -34,17 +12,15 @@ const styleProps = {
   }
 };
 
-const Menu = ({ colors, setColorSelected }) => {
+const Menu = ({ colors, setColorSelected, handleClick, text }) => {
   const handleClickColor = (event) => setColorSelected(colors[event.target.value]);
 
   return (
     <HStack mb={4} spacing="16px" bg="black">
-      <Button 
-        {...styleProps} 
-        bg="ui.gray.500" 
-        color="black"
-      >AA
-      </Button>
+
+      <TypeMode
+      handleClick={handleClick}
+      text={text} />
 
       <Button
         {...styleProps}
