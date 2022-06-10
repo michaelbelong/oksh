@@ -26,24 +26,54 @@ export const terminalProps = {
 
 export const TEXT_INPUT_MODES = [
   {
-  key: 9,
-  text: "AA",
-  value: "uppercase"
+    key: 1,
+    text: "AA",
+    value: "uppercase"
   },
   {
-  key: 9,
-  text: "Aa",
-  value: "titlecase"
+    key: 2,
+    text: "Aa",
+    value: "titlecase"
   },
   {
-  key: 9,
-  text: "aa",
-  value: "lowercase"
+    key: 3,
+    text: "aa",
+    value: "lowercase"
   },
   {
-  key: 9,
-  text: "FF",
-  value: "freeform"
+    key: 4,
+    text: "FF",
+    value: "freeform"
+  }
+];
+
+export const SOCIAL_LINKS = [
+  {
+    key: 1,
+    text: "Twitter",
+    link: "https://twitter.com/okpcnft"
+  },
+  {
+    key: 2,
+    text: "Discord",
+    link: "https://discord.gg/okpc"
+  },
+  {
+    key: 3,
+    text: "Zora",
+    link:
+      "https://zora.co/collections/0x7183209867489E1047f3A7c23ea1Aed9c4E236E8"
+  },
+  {
+    key: 4,
+    text: "OpenSea",
+    link: "https://opensea.io/collection/okpc"
+  },
+  {
+    key: 5,
+    text: "LooksRare",
+    link:
+      "https://looksrare.org/collections/0x7183209867489E1047f3A7c23ea1Aed9c4E236E8"
   }
 ];
 
@@ -86,33 +116,3 @@ export const TEXT_INPUT_MODES = [
 //     ]
 //   }
 // };
-
-export const SOCIAL_LINKS = [
-  {
-    key: 1,
-    text: "Twitter",
-    link: "https://twitter.com/okpcnft"
-  },
-  {
-    key: 2,
-    text: "Discord",
-    link: "https://discord.gg/okpc"
-  },
-  {
-    key: 3,
-    text: "Zora",
-    link:
-      "https://zora.co/collections/0x7183209867489E1047f3A7c23ea1Aed9c4E236E8"
-  },
-  {
-    key: 4,
-    text: "OpenSea",
-    link: "https://opensea.io/collection/okpc"
-  },
-  {
-    key: 5,
-    text: "LooksRare",
-    link:
-      "https://looksrare.org/collections/0x7183209867489E1047f3A7c23ea1Aed9c4E236E8"
-  }
-];

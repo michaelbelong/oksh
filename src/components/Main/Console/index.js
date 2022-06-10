@@ -13,18 +13,16 @@ const Execute = ({ Children, text, isCopied, colorSelected, ...rest }) => (
   </Tooltip>
 );
 
-const Console = ({ colorSelected, text, value, counter }) => {
+const Console = ({ colorSelected, counter }) => {
   
   const { isCopied, handleExecute, terminalProps } = useTerminal(counter);
   
-  console.log(text, value, counter);
-
   terminalProps.theme['promptSymbolColor'] = colorSelected
   terminalProps.theme['outputColor'] = colorSelected
   terminalProps.theme['commandColor'] = colorSelected
 
   return (
-    <Box className="console">
+    <Box className="console" w="100%">
       <Terminal {...terminalProps} />
 
       <Flex mt={4} justifyContent="flex-end">

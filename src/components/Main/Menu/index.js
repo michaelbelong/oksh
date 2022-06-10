@@ -19,8 +19,10 @@ const Menu = ({ colors, setColorSelected, handleClick, text }) => {
     <HStack mb={4} spacing="16px" bg="black">
 
       <TypeMode
-      handleClick={handleClick}
-      text={text} />
+        styleProps={styleProps}
+        text={text} 
+        handleClick={handleClick}
+      />
 
       <Button
         {...styleProps}
