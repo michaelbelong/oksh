@@ -12,7 +12,7 @@ export const colors = {
 };
 
 export const terminalProps = {
-  promptSymbol: "𝙾𝙺𝚂𝙷-𝟷.1Ξ ",
+  promptSymbol: "𝙾𝙺𝚂𝙷-𝟷.𝟷Ξ ",
   clickToFocus: true,
   autoFocus: true,
   theme: {
