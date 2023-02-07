@@ -10,13 +10,14 @@ import {
   useCopyToClipboard,
   CHAR_LIMIT,
   terminalProps,
+  TEXT_INPUT_MODES
 } from '../../../custom'
 
 const consoleState = EmulatorState.create({
   'commandMapping': CommandMapping.create({})
 })
 
-export const useTerminal = () => {
+export const useTerminal = (counter) => {
   const { isCopied, makeCopy } = useCopyToClipboard()
   const [ emulatorState, setEmulator ] = useState(consoleState)
   const [ inputStr, setInput ] = useState('')
@@ -40,9 +41,41 @@ export const useTerminal = () => {
   }
 
   const onInputChange = (value) => {
+    console.log(TEXT_INPUT_MODES[counter].text)
     if (value.length >= CHAR_LIMIT) return null
-    const textGenerated = fancify(value, 'math mono')
-    setInput(textGenerated)
+
+    if (TEXT_INPUT_MODES[counter].text=="AA") {
+      const upperCase = value.toUpperCase();
+      console.log(upperCase);
+      setInput(upperCase);
+    } else if (TEXT_INPUT_MODES[counter].text=="Aa") {
+
+        function toTitleCase(str) {
+          str = str.toLowerCase().split(' ');
+          for (var i = 0; i < str.length; i++) {
+          str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
+          }
+          return str.join(' ');
+        }
+        const titleCase = toTitleCase(value)
+        console.log(titleCase);
+        setInput(titleCase);
+
+    } else if (TEXT_INPUT_MODES[counter].text=="aa") {
+      const lowerCase = value.toLowerCase();
+      console.log(lowerCase);
+      setInput(lowerCase);
+    } else if (TEXT_INPUT_MODES[counter].text=="FF") {
+        // const freeForm = 
+        setInput(value);
+    }
+    return { value }
+    
+    // const titleCase = value
+    // const textGenerated = fancify(value, 'math mono')
+    // setInput(textGenerated)
+    // setInput(value)
+    
   }
 
 

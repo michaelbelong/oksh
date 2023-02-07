@@ -1,5 +1,5 @@
 import "./console.css";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Box, Flex, Tooltip, Button } from "@chakra-ui/react";
 import { ReactTerminalStateless as Terminal } from "react-terminal-component";
 import { COPY_LABEL } from "../../../custom";
@@ -13,8 +13,16 @@ const Execute = ({ Children, text, isCopied, colorSelected, ...rest }) => (
   </Tooltip>
 );
 
-const Console = ({ colorSelected }) => {
-  const { isCopied, handleExecute, terminalProps } = useTerminal();
+const Console = ({ colorSelected, text, value, counter }) => {
+  
+  const { isCopied, handleExecute, terminalProps } = useTerminal(counter);
+  
+  console.log(text, value, counter);
+  const terminalRef = useRef(null);
+
+  useEffect(() => {
+    terminalRef.current.focus();
+  }, []);
 
   terminalProps.theme['promptSymbolColor'] = colorSelected
   terminalProps.theme['outputColor'] = colorSelected
@@ -22,7 +30,7 @@ const Console = ({ colorSelected }) => {
 
   return (
     <Box className="console">
-      <Terminal {...terminalProps} />
+      <Terminal ref={terminalRef} {...terminalProps} />
 
       <Flex mt={4} justifyContent="flex-end">
         <Execute
