@@ -12,9 +12,9 @@ export const colors = {
 };
 
 export const terminalProps = {
-  promptSymbol: "𝙾𝙺𝚂𝙷-𝟷.𝟶Ξ ",
+  promptSymbol: "𝙾𝙺𝚂𝙷-𝟷.1Ξ ",
   clickToFocus: true,
-  autoFocus: false,
+  autoFocus: true,
   theme: {
     ...ReactThemes.default,
     background: "black",
