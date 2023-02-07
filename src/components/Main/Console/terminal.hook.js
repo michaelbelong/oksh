@@ -69,6 +69,7 @@ export const useTerminal = (counter) => {
         // const freeForm = 
         setInput(value);
     }
+    return { value }
     
     // const titleCase = value
     // const textGenerated = fancify(value, 'math mono')
