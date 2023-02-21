@@ -1,7 +1,7 @@
 import { ReactThemes } from "react-terminal-component";
 
-export const COPY_LABEL = "𝙲𝙾𝙿𝙸𝙴𝙳 Ξ";
-export const CHAR_LIMIT = 280;
+export const COPY_LABEL = "COPIED TO CLIPBOARD.";
+export const CHAR_LIMIT = 420;
 
 export const colors = {
   green: "hsl(155, 100%, 43%)",
