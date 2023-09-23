@@ -90,29 +90,29 @@ export const TEXT_INPUT_MODES = [
 export const SOCIAL_LINKS = [
   {
     key: 1,
-    text: "Twitter",
-    link: "https://twitter.com/okpcnft"
+    text: "Farcaster",
+    link: "https://warpcast.com/punk"
   },
   {
     key: 2,
     text: "Discord",
-    link: "https://discord.gg/okpc"
+    link: "https://discord.gg/ppuunnkk"
   },
   {
     key: 3,
     text: "Zora",
     link:
-      "https://zora.co/collections/0x7183209867489E1047f3A7c23ea1Aed9c4E236E8"
+      "https://zora.co/metanorm.eth"
   },
   {
     key: 4,
-    text: "OpenSea",
-    link: "https://opensea.io/collection/okpc"
+    text: "PUNK ENERGY",
+    link: "https://www.punk.energy/"
   },
   {
     key: 5,
-    text: "LooksRare",
+    text: "PuNKStep",
     link:
-      "https://looksrare.org/collections/0x7183209867489E1047f3A7c23ea1Aed9c4E236E8"
+      "https://www.punkstep.com/"
   }
 ];
