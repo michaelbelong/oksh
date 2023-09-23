@@ -60,18 +60,27 @@ export const useTerminal = (counter) => {
     setInput(textGenerated);
   }, [ counter ]);
 
-  const handleExecute = () => {
+  const handleExecute = async () => {
     let newEmulatorState;
     const defaultOutputs = emulatorState.getOutputs();
     const textOutput = OutputFactory.makeTextOutput(terminalProps.promptSymbol + ' ' + inputStr);
     const newOutputs = Outputs.addRecord(defaultOutputs, textOutput);
     newEmulatorState = emulatorState.setOutputs(newOutputs);
-
-    makeCopy(inputStr)
-    setEmulator(newEmulatorState)
-    setInput('')
-    setOriginal('')
+  
+    // Use Clipboard API directly
+    try {
+      await navigator.clipboard.writeText(inputStr);
+      console.log('Text copied to clipboard');
+    } catch (err) {
+      console.error('Failed to copy text:', err);
+      // Handle the error, e.g., show a user-friendly message or prompt for permission
+    }
+  
+    setEmulator(newEmulatorState);
+    setInput('');
+    setOriginal('');
   };
+
 
   const onInputChange = (value) => {
     if (value.length >= CHAR_LIMIT) return null;
